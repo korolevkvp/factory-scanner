@@ -1,0 +1,157 @@
+<div>
+  <h2 id="page-heading" data-cy="WorkerHeading">
+    <span jhiTranslate="factoryScannerApp.worker.home.title">Workers</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="factoryScannerApp.worker.home.refreshListLabel">Обновить список</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-worker-my-angular-suffix"
+        [routerLink]="['/worker-my-angular-suffix/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="factoryScannerApp.worker.home.createLabel"> Создать новый Worker </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="workers?.length === 0">
+    <span jhiTranslate="factoryScannerApp.worker.home.notFound">Workers не найдено</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="workers && workers.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="firstName">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.firstName">First Name</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="middleName">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.middleName">Middle Name</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="lastName">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.lastName">Last Name</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="salary">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.salary">Salary</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="phoneNumber">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.phoneNumber">Phone Number</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="hireDate">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.hireDate">Hire Date</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="grade">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.grade">Grade</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="job.id">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.job">Job</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="factory.id">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.worker.factory">Factory</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody
+        infinite-scroll
+        (scrolled)="loadPage(page + 1)"
+        [infiniteScrollDisabled]="page - 1 >= links['last']"
+        [infiniteScrollDistance]="0"
+      >
+        <tr *ngFor="let worker of workers; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/worker-my-angular-suffix', worker.id, 'view']">{{ worker.id }}</a>
+          </td>
+          <td>{{ worker.firstName }}</td>
+          <td>{{ worker.middleName }}</td>
+          <td>{{ worker.lastName }}</td>
+          <td>{{ worker.salary }}</td>
+          <td>{{ worker.phoneNumber }}</td>
+          <td>{{ worker.hireDate | formatMediumDate }}</td>
+          <td jhiTranslate="{{ 'factoryScannerApp.Grade.' + worker.grade }}">{{ worker.grade }}</td>
+          <td>
+            <div *ngIf="worker.job">
+              <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="worker.factory">
+              <a [routerLink]="['/factory-my-angular-suffix', worker.factory.id, 'view']">{{ worker.factory.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/worker-my-angular-suffix', worker.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Просмотр</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/worker-my-angular-suffix', worker.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Изменить</span>
+              </button>
+
+              <button type="submit" (click)="delete(worker)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Удалить</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

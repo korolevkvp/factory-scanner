@@ -1,0 +1,27 @@
+{
+  "factoryScannerApp": {
+    "factory": {
+      "home": {
+        "title": "Factories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Factory",
+        "createOrEditLabel": "Create or edit a Factory",
+        "notFound": "No Factories found"
+      },
+      "created": "A new Factory is created with identifier {{ param }}",
+      "updated": "A Factory is updated with identifier {{ param }}",
+      "deleted": "A Factory is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Factory {{ id }}?"
+      },
+      "detail": {
+        "title": "Factory"
+      },
+      "id": "ID",
+      "name": "Name",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City"
+    }
+  }
+}

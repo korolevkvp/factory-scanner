@@ -1,0 +1,32 @@
+{
+  "angularJSSuffix": "myAngularSuffix",
+  "applications": "*",
+  "changelogDate": "20230408135948",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "machine",
+  "fields": [
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "MachineType",
+      "fieldValues": "LATHE,MILLING,GRINDING,DRILLING,SHAPER,BROACHING,SAW,PLANER,SHEARING,HOBBING"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Machine",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "factory",
+      "relationshipName": "factory",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

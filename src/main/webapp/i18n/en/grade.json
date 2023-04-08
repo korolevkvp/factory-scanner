@@ -1,0 +1,11 @@
+{
+  "factoryScannerApp": {
+    "Grade": {
+      "null": "",
+      "JUNIOR": "JUNIOR",
+      "MIDDLE": "MIDDLE",
+      "SENIOR": "SENIOR",
+      "LEAD": "LEAD"
+    }
+  }
+}

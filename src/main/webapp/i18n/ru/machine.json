@@ -1,0 +1,26 @@
+{
+  "factoryScannerApp": {
+    "machine": {
+      "home": {
+        "title": "Machines",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Machine",
+        "createOrEditLabel": "Создать или отредактировать Machine",
+        "notFound": "Machines не найдено"
+      },
+      "created": "Новый Machine создан с идентификатором {{ param }}",
+      "updated": "Machine обновлен с идентификатором {{ param }}",
+      "deleted": "Machine удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Machine {{ id }}?"
+      },
+      "detail": {
+        "title": "Machine"
+      },
+      "id": "ID",
+      "model": "Model",
+      "type": "Type",
+      "factory": "Factory"
+    }
+  }
+}

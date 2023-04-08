@@ -1,0 +1,12 @@
+{
+  "factoryScannerApp": {
+    "JobType": {
+      "null": "",
+      "PRODUCTION": "PRODUCTION",
+      "SUPPORTIVE": "SUPPORTIVE",
+      "ATTENDANT": "ATTENDANT",
+      "TECH_ENG": "TECH_ENG",
+      "ACCOUNTING": "ACCOUNTING"
+    }
+  }
+}

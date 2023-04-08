@@ -1,0 +1,27 @@
+{
+  "factoryScannerApp": {
+    "factory": {
+      "home": {
+        "title": "Factories",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Factory",
+        "createOrEditLabel": "Создать или отредактировать Factory",
+        "notFound": "Factories не найдено"
+      },
+      "created": "Новый Factory создан с идентификатором {{ param }}",
+      "updated": "Factory обновлен с идентификатором {{ param }}",
+      "deleted": "Factory удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Factory {{ id }}?"
+      },
+      "detail": {
+        "title": "Factory"
+      },
+      "id": "ID",
+      "name": "Name",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City"
+    }
+  }
+}

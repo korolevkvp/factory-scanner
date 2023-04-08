@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="machine">
+      <h2 data-cy="machineDetailsHeading"><span jhiTranslate="factoryScannerApp.machine.detail.title">Machine</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ machine.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.machine.model">Model</span></dt>
+        <dd>
+          <span>{{ machine.model }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.machine.type">Type</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'factoryScannerApp.MachineType.' + machine.type }}">{{ machine.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.machine.factory">Factory</span></dt>
+        <dd>
+          <div *ngIf="machine.factory">
+            <a [routerLink]="['/factory-my-angular-suffix', machine.factory.id, 'view']">{{ machine.factory.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Назад</span>
+      </button>
+
+      <button type="button" [routerLink]="['/machine-my-angular-suffix', machine.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Изменить</span>
+      </button>
+    </div>
+  </div>
+</div>

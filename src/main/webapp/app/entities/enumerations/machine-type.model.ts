@@ -1,0 +1,21 @@
+export enum MachineType {
+  LATHE = 'LATHE',
+
+  MILLING = 'MILLING',
+
+  GRINDING = 'GRINDING',
+
+  DRILLING = 'DRILLING',
+
+  SHAPER = 'SHAPER',
+
+  BROACHING = 'BROACHING',
+
+  SAW = 'SAW',
+
+  PLANER = 'PLANER',
+
+  SHEARING = 'SHEARING',
+
+  HOBBING = 'HOBBING',
+}

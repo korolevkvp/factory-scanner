@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="worker">
+      <h2 data-cy="workerDetailsHeading"><span jhiTranslate="factoryScannerApp.worker.detail.title">Worker</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ worker.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.firstName">First Name</span></dt>
+        <dd>
+          <span>{{ worker.firstName }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.middleName">Middle Name</span></dt>
+        <dd>
+          <span>{{ worker.middleName }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.lastName">Last Name</span></dt>
+        <dd>
+          <span>{{ worker.lastName }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.salary">Salary</span></dt>
+        <dd>
+          <span>{{ worker.salary }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.phoneNumber">Phone Number</span></dt>
+        <dd>
+          <span>{{ worker.phoneNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.hireDate">Hire Date</span></dt>
+        <dd>
+          <span>{{ worker.hireDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.grade">Grade</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'factoryScannerApp.Grade.' + worker.grade }}">{{ worker.grade }}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.job">Job</span></dt>
+        <dd>
+          <div *ngIf="worker.job">
+            <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="factoryScannerApp.worker.factory">Factory</span></dt>
+        <dd>
+          <div *ngIf="worker.factory">
+            <a [routerLink]="['/factory-my-angular-suffix', worker.factory.id, 'view']">{{ worker.factory.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Назад</span>
+      </button>
+
+      <button type="button" [routerLink]="['/worker-my-angular-suffix', worker.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Изменить</span>
+      </button>
+    </div>
+  </div>
+</div>

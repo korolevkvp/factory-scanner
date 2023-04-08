@@ -1,0 +1,32 @@
+{
+  "factoryScannerApp": {
+    "worker": {
+      "home": {
+        "title": "Workers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Worker",
+        "createOrEditLabel": "Create or edit a Worker",
+        "notFound": "No Workers found"
+      },
+      "created": "A new Worker is created with identifier {{ param }}",
+      "updated": "A Worker is updated with identifier {{ param }}",
+      "deleted": "A Worker is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Worker {{ id }}?"
+      },
+      "detail": {
+        "title": "Worker"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "salary": "Salary",
+      "phoneNumber": "Phone Number",
+      "hireDate": "Hire Date",
+      "grade": "Grade",
+      "job": "Job",
+      "factory": "Factory"
+    }
+  }
+}
