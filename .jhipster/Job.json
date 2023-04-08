@@ -1,0 +1,34 @@
+{
+  "angularJSSuffix": "myAngularSuffix",
+  "applications": "*",
+  "changelogDate": "20230408144210",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "job",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "JobType",
+      "fieldValues": "PRODUCTION,SUPPORTIVE,ATTENDANT,TECH_ENG,ACCOUNTING"
+    },
+    {
+      "fieldName": "minSalary",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maxSalary",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Job",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

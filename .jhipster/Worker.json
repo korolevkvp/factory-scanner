@@ -1,0 +1,59 @@
+{
+  "angularJSSuffix": "myAngularSuffix",
+  "applications": "*",
+  "changelogDate": "20230408144207",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "worker",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "middleName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "salary",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hireDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "grade",
+      "fieldType": "Grade",
+      "fieldValues": "JUNIOR,MIDDLE,SENIOR,LEAD"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Worker",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "job",
+      "relationshipName": "job",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "factory",
+      "relationshipName": "factory",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
