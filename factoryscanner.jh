@@ -1,0 +1,92 @@
+
+entity Worker {
+	firstName String,
+    middleName String,
+    lastName String,
+    salary Long,
+	phoneNumber String,
+	hireDate LocalDate,
+	salary Long
+    grade Grade
+}
+
+enum Grade {
+    JUNIOR, MIDDLE, SENIOR, LEAD
+}
+
+entity Machine {
+	model String,
+    type MachineType
+}
+
+enum MachineType {
+    LATHE,
+    MILLING,
+    GRINDING,
+    DRILLING,
+    SHAPER, 
+    BROACHING,
+    SAW,
+    PLANER,
+    SHEARING,
+    HOBBING
+}
+
+entity Factory {
+	name String,
+	streetAddress String,
+	postalCode String,
+	city String
+}
+
+entity Job {
+	title String,
+    type JobType,
+	minSalary Long,
+	maxSalary Long
+}
+
+enum JobType {
+	PRODUCTION,
+    SUPPORTIVE,
+    ATTENDANT,
+    TECH_ENG,
+    ACCOUNTING
+}
+
+relationship ManyToOne {
+	Machine{factory} to Factory
+}
+
+relationship ManyToOne {
+	Worker{job} to Job
+}
+
+relationship ManyToOne {
+	Worker{grade} to Grade
+}
+
+relationship ManyToOne {
+	Machine{type} to MachineType
+}
+
+relationship ManyToOne {
+	Worker{factory} to Factory
+}
+
+relationship ManyToOne {
+	Job{type} to JobType
+}
+
+// Set pagination options
+paginate Machine, Worker, Factory with infinite-scroll
+paginate Job with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+angularSuffix * with myAngularSuffix
