@@ -20,27 +20,29 @@ entity Machine {
 }
 
 enum MachineType {
-    LATHE,
-    MILLING,
-    GRINDING,
+    LATHETURNING,
+    LATHEREVOLVING,
+    LATHECAROUSEL,
+    BORING,
+    COORDINATEBORING, 
     DRILLING,
-    SHAPER, 
-    BROACHING,
-    SAW,
-    PLANER,
-    SHEARING,
-    HOBBING
+    PLANINGMORTISING,
+    DRAWING,
+    GRINDING,
+    TOOTHCUTTING,
+    SPECIAL,
+    CUTOFF
 }
 
 entity Factory {
 	name String,
 	streetAddress String,
 	postalCode String,
-	city String
+    city String
 }
 
 entity Job {
-	title String,
+	name String,
     type JobType,
 	minSalary Long,
 	maxSalary Long
