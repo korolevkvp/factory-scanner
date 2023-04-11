@@ -2,10 +2,10 @@
   "factoryScannerApp": {
     "Grade": {
       "null": "",
-      "JUNIOR": "JUNIOR",
-      "MIDDLE": "MIDDLE",
-      "SENIOR": "SENIOR",
-      "LEAD": "LEAD"
+      "JUNIOR": "Младший",
+      "MIDDLE": "Старший",
+      "SENIOR": "Ведущий",
+      "LEAD": "Главный"
     }
   }
 }

@@ -2,31 +2,31 @@
   "factoryScannerApp": {
     "worker": {
       "home": {
-        "title": "Workers",
+        "title": "Рабочие",
         "refreshListLabel": "Обновить список",
-        "createLabel": "Создать новый Worker",
-        "createOrEditLabel": "Создать или отредактировать Worker",
-        "notFound": "Workers не найдено"
+        "createLabel": "Добавить нового Рабочего",
+        "createOrEditLabel": "Добавить или отредактировать Рабочего",
+        "notFound": "Рабочий не найдено"
       },
-      "created": "Новый Worker создан с идентификатором {{ param }}",
-      "updated": "Worker обновлен с идентификатором {{ param }}",
-      "deleted": "Worker удален с идентификатором {{ param }}",
+      "created": "Новый Рабочий создан с идентификатором {{ param }}",
+      "updated": "Рабочий обновлен с идентификатором {{ param }}",
+      "deleted": "Рабочий удален с идентификатором {{ param }}",
       "delete": {
-        "question": "Вы уверены что хотите удалить Worker {{ id }}?"
+        "question": "Вы уверены что хотите удалить Рабочего {{ id }}?"
       },
       "detail": {
-        "title": "Worker"
+        "title": "Рабочий"
       },
       "id": "ID",
-      "firstName": "First Name",
-      "middleName": "Middle Name",
-      "lastName": "Last Name",
-      "salary": "Salary",
-      "phoneNumber": "Phone Number",
-      "hireDate": "Hire Date",
-      "grade": "Grade",
-      "job": "Job",
-      "factory": "Factory"
+      "firstName": "Имя",
+      "middleName": "Отчество",
+      "lastName": "Фамилия",
+      "salary": "Зарплата",
+      "phoneNumber": "Номер телефона",
+      "hireDate": "Дата найма",
+      "grade": "Уровень",
+      "job": "Должность",
+      "factory": "Завод"
     }
   }
 }

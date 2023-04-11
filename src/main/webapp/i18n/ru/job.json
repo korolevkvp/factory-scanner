@@ -2,26 +2,26 @@
   "factoryScannerApp": {
     "job": {
       "home": {
-        "title": "Jobs",
+        "title": "Должности",
         "refreshListLabel": "Обновить список",
-        "createLabel": "Создать новый Job",
-        "createOrEditLabel": "Создать или отредактировать Job",
-        "notFound": "Jobs не найдено"
+        "createLabel": "Добавить новую Должность",
+        "createOrEditLabel": "Добавить или отредактировать Должность",
+        "notFound": "Должность не найдена"
       },
-      "created": "Новый Job создан с идентификатором {{ param }}",
-      "updated": "Job обновлен с идентификатором {{ param }}",
-      "deleted": "Job удален с идентификатором {{ param }}",
+      "created": "Новая Должность создана с идентификатором {{ param }}",
+      "updated": "Должность обновлена с идентификатором {{ param }}",
+      "deleted": "Должность удалена с идентификатором {{ param }}",
       "delete": {
         "question": "Вы уверены что хотите удалить Job {{ id }}?"
       },
       "detail": {
-        "title": "Job"
+        "title": "Должность"
       },
       "id": "ID",
-      "name": "Name",
-      "type": "Type",
-      "minSalary": "Min Salary",
-      "maxSalary": "Max Salary"
+      "name": "Наименование",
+      "type": "Тип",
+      "minSalary": "Минимальная зарплата",
+      "maxSalary": "Максимальная зарплата"
     }
   }
 }

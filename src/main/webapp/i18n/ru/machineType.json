@@ -2,20 +2,20 @@
   "factoryScannerApp": {
     "MachineType": {
       "null": "",
-      "LATHE_TURNING": "LATHE_TURNING",
-      "LATHE_REVOLVING": "LATHE_REVOLVING",
-      "AUTOMATIC": "AUTOMATIC",
-      "LATHE_CAROUSEL": "LATHE_CAROUSEL",
-      "BORING": "BORING",
-      "COORDINATE_BORING": "COORDINATE_BORING",
-      "DRILLING": "DRILLING",
-      "MILLING": "MILLING",
-      "PLANING_MORTISING": "PLANING_MORTISING",
-      "DRAWING": "DRAWING",
-      "GRINDING": "GRINDING",
-      "TOOTH_CUTTING": "TOOTH_CUTTING",
-      "SPECIAL": "SPECIAL",
-      "CUT_OFF": "CUT_OFF"
+      "LATHE_TURNING": "ТОКАРНО-ВИНТОРЕЗНЫЕ",
+      "LATHE_REVOLVING": "ТОКАРНО-РЕВОЛЬВЕРНЫЕ",
+      "AUTOMATIC": "ТОКАРНЫЕ АВТОМАТЫ И ПОЛУАВТОМАТЫ",
+      "LATHE_CAROUSEL": "ТОКАРНО-КАРУСЕЛЬНЫЕ",
+      "BORING": "РАСТОЧНЫЕ",
+      "COORDINATE_BORING": "КООРДИНАТНОРАСТОЧНЫЕ",
+      "DRILLING": "СВЕРЛИЛЬНЫЕ",
+      "MILLING": "ФРЕЗЕРНЫЕ",
+      "PLANING_MORTISING": "СТРОГАЛЬНЫЕ И ДОЛБЕЖНЫЕ",
+      "DRAWING": "ПРОТЯЖНЫЕ",
+      "GRINDING": "ШЛИФОВАЛЬНЫЕ",
+      "TOOTH_CUTTING": "ЗУБООБРАБАТЫВАЮЩИЕ",
+      "SPECIAL": "СПЕЦИАЛЬНЫЕ, АГРЕГАТНЫЕ, АВТОМАТЫ И ПОЛУАВТОМАТЫ",
+      "CUT_OFF": "ОТРЕЗНЫЕ"
     }
   }
 }

@@ -2,25 +2,25 @@
   "factoryScannerApp": {
     "factory": {
       "home": {
-        "title": "Factories",
+        "title": "Предприятия",
         "refreshListLabel": "Обновить список",
-        "createLabel": "Создать новый Factory",
-        "createOrEditLabel": "Создать или отредактировать Factory",
-        "notFound": "Factories не найдено"
+        "createLabel": "Добавить новый Завод",
+        "createOrEditLabel": "Добавить или отредактировать Завод",
+        "notFound": "Завод не найден"
       },
-      "created": "Новый Factory создан с идентификатором {{ param }}",
-      "updated": "Factory обновлен с идентификатором {{ param }}",
-      "deleted": "Factory удален с идентификатором {{ param }}",
+      "created": "Новый Завод создан с идентификатором {{ param }}",
+      "updated": "Завод обновлен с идентификатором {{ param }}",
+      "deleted": "Завод удален с идентификатором {{ param }}",
       "delete": {
-        "question": "Вы уверены что хотите удалить Factory {{ id }}?"
+        "question": "Вы уверены что хотите удалить Завод {{ id }}?"
       },
       "detail": {
-        "title": "Factory"
+        "title": "Завод"
       },
       "id": "ID",
-      "name": "Name",
-      "address": "Address",
-      "postalCode": "Postal Code"
+      "name": "Наименование",
+      "address": "Адрес",
+      "postalCode": "Почтовый индекс"
     }
   }
 }

@@ -7,10 +7,10 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Сущности",
-        "workerMyAngularSuffix": "Worker",
-        "machineMyAngularSuffix": "Machine",
-        "factoryMyAngularSuffix": "Factory",
-        "jobMyAngularSuffix": "Job",
+        "workerMyAngularSuffix": "Рабочий",
+        "machineMyAngularSuffix": "Станок",
+        "factoryMyAngularSuffix": "Завод",
+        "jobMyAngularSuffix": "Должность",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -138,9 +138,9 @@
     "userexists": "Имя пользователя уже используется!",
     "emailexists": "Эл. почта уже используется!!",
     "idexists": "Новый {{entityName}} не может иметь данный ID",
-    "idnull": "Неверный ID",
-    "idinvalid": "Invalid Id",
-    "idnotfound": "ID cannot be found",
+    "idnull": "Пустой ID",
+    "idinvalid": "Неверный ID",
+    "idnotfound": "ID не найден",
     "file": {
       "could.not.extract": "Не удалось извлечь файл",
       "not.image": "Файл должен был быть изображением, но было установлено, что \"{{ fileType }}\""
