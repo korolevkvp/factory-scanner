@@ -20,8 +20,8 @@ public class Job implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "name")
+    private String name;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
@@ -48,17 +48,17 @@ public class Job implements Serializable {
         this.id = id;
     }
 
-    public String getTitle() {
-        return this.title;
+    public String getName() {
+        return this.name;
     }
 
-    public Job title(String title) {
-        this.setTitle(title);
+    public Job name(String name) {
+        this.setName(name);
         return this;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public JobType getType() {
@@ -124,7 +124,7 @@ public class Job implements Serializable {
     public String toString() {
         return "Job{" +
             "id=" + getId() +
-            ", title='" + getTitle() + "'" +
+            ", name='" + getName() + "'" +
             ", type='" + getType() + "'" +
             ", minSalary=" + getMinSalary() +
             ", maxSalary=" + getMaxSalary() +

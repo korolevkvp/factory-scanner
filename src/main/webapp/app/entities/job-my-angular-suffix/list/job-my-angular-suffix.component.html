@@ -38,9 +38,9 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="title">
+          <th scope="col" jhiSortBy="name">
             <div class="d-flex">
-              <span jhiTranslate="factoryScannerApp.job.title">Title</span>
+              <span jhiTranslate="factoryScannerApp.job.name">Name</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -70,7 +70,7 @@
           <td>
             <a [routerLink]="['/job-my-angular-suffix', job.id, 'view']">{{ job.id }}</a>
           </td>
-          <td>{{ job.title }}</td>
+          <td>{{ job.name }}</td>
           <td jhiTranslate="{{ 'factoryScannerApp.JobType.' + job.type }}">{{ job.type }}</td>
           <td>{{ job.minSalary }}</td>
           <td>{{ job.maxSalary }}</td>

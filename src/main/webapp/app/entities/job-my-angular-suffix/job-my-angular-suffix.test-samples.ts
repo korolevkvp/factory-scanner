@@ -8,13 +8,13 @@ export const sampleWithRequiredData: IJobMyAngularSuffix = {
 
 export const sampleWithPartialData: IJobMyAngularSuffix = {
   id: 59185,
-  title: 'Грубый Фильмы systemic',
+  name: 'Грубый Фильмы systemic',
   maxSalary: 32907,
 };
 
 export const sampleWithFullData: IJobMyAngularSuffix = {
   id: 90392,
-  title: 'Ringgit functionalities Fundamental',
+  name: 'Ringgit functionalities Fundamental',
   type: JobType['SUPPORTIVE'],
   minSalary: 17658,
   maxSalary: 47285,

@@ -45,8 +45,8 @@ class MachineResourceIT {
     private static final String DEFAULT_MODEL = "AAAAAAAAAA";
     private static final String UPDATED_MODEL = "BBBBBBBBBB";
 
-    private static final MachineType DEFAULT_TYPE = MachineType.LATHE;
-    private static final MachineType UPDATED_TYPE = MachineType.MILLING;
+    private static final MachineType DEFAULT_TYPE = MachineType.LATHETURNING;
+    private static final MachineType UPDATED_TYPE = MachineType.LATHEREVOLVING;
 
     private static final String ENTITY_API_URL = "/api/machines";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";

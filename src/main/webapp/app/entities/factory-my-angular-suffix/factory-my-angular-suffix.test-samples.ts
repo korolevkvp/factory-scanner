@@ -5,17 +5,16 @@ export const sampleWithRequiredData: IFactoryMyAngularSuffix = {
 };
 
 export const sampleWithPartialData: IFactoryMyAngularSuffix = {
-  id: 77060,
-  name: 'твердотельный benchmark',
-  streetAddress: 'Account Гранитный Южно-Африканская',
+  id: 41643,
+  name: 'invoice серый Buckinghamshire',
+  address: 'аналитик менеджер',
 };
 
 export const sampleWithFullData: IFactoryMyAngularSuffix = {
-  id: 39380,
-  name: 'static Международный',
-  streetAddress: 'Stand-alone автономный Региональный',
-  postalCode: 'онлайн',
-  city: 'Lake Rogerberg',
+  id: 30946,
+  name: 'Account support',
+  address: 'свободно-распростроняемый',
+  postalCode: 'автономный Региональный Практичный',
 };
 
 export const sampleWithNewData: NewFactoryMyAngularSuffix = {

@@ -7,7 +7,7 @@
   "entityTableName": "job",
   "fields": [
     {
-      "fieldName": "title",
+      "fieldName": "name",
       "fieldType": "String"
     },
     {

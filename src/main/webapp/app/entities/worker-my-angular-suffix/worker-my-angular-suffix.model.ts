@@ -12,7 +12,7 @@ export interface IWorkerMyAngularSuffix {
   phoneNumber?: string | null;
   hireDate?: dayjs.Dayjs | null;
   grade?: Grade | null;
-  job?: Pick<IJobMyAngularSuffix, 'id' | 'title'> | null;
+  job?: Pick<IJobMyAngularSuffix, 'id' | 'name'> | null;
   factory?: Pick<IFactoryMyAngularSuffix, 'id' | 'name'> | null;
 }
 

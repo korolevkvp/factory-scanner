@@ -19,9 +19,8 @@
       },
       "id": "ID",
       "name": "Name",
-      "streetAddress": "Street Address",
-      "postalCode": "Postal Code",
-      "city": "City"
+      "address": "Address",
+      "postalCode": "Postal Code"
     }
   }
 }

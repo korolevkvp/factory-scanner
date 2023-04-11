@@ -80,7 +80,7 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="job.title">
+          <th scope="col" jhiSortBy="job.name">
             <div class="d-flex">
               <span jhiTranslate="factoryScannerApp.worker.job">Job</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
@@ -114,7 +114,7 @@
           <td jhiTranslate="{{ 'factoryScannerApp.Grade.' + worker.grade }}">{{ worker.grade }}</td>
           <td>
             <div *ngIf="worker.job">
-              <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.title }}</a>
+              <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.name }}</a>
             </div>
           </td>
           <td>

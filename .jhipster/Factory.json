@@ -11,15 +11,11 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "streetAddress",
+      "fieldName": "address",
       "fieldType": "String"
     },
     {
       "fieldName": "postalCode",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "city",
       "fieldType": "String"
     }
   ],

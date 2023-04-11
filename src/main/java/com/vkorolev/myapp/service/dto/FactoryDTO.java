@@ -13,11 +13,9 @@ public class FactoryDTO implements Serializable {
 
     private String name;
 
-    private String streetAddress;
+    private String address;
 
     private String postalCode;
-
-    private String city;
 
     public Long getId() {
         return id;
@@ -35,12 +33,12 @@ public class FactoryDTO implements Serializable {
         this.name = name;
     }
 
-    public String getStreetAddress() {
-        return streetAddress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPostalCode() {
@@ -49,14 +47,6 @@ public class FactoryDTO implements Serializable {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     @Override
@@ -86,9 +76,8 @@ public class FactoryDTO implements Serializable {
         return "FactoryDTO{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
-            ", streetAddress='" + getStreetAddress() + "'" +
+            ", address='" + getAddress() + "'" +
             ", postalCode='" + getPostalCode() + "'" +
-            ", city='" + getCity() + "'" +
             "}";
     }
 }
