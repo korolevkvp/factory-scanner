@@ -9,13 +9,13 @@ export const sampleWithRequiredData: IMachineMyAngularSuffix = {
 export const sampleWithPartialData: IMachineMyAngularSuffix = {
   id: 29289,
   model: 'PNG Стул',
-  type: MachineType['LATHEREVOLVING'],
+  type: MachineType['LATHE_REVOLVING'],
 };
 
 export const sampleWithFullData: IMachineMyAngularSuffix = {
   id: 40968,
   model: 'Franc payment',
-  type: MachineType['LATHECAROUSEL'],
+  type: MachineType['LATHE_CAROUSEL'],
 };
 
 export const sampleWithNewData: NewMachineMyAngularSuffix = {
