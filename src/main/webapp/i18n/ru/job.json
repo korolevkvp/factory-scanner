@@ -18,7 +18,7 @@
         "title": "Job"
       },
       "id": "ID",
-      "title": "Title",
+      "name": "Name",
       "type": "Type",
       "minSalary": "Min Salary",
       "maxSalary": "Max Salary"

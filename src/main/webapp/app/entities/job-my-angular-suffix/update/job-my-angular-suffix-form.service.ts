@@ -18,7 +18,7 @@ type JobMyAngularSuffixFormDefaults = Pick<NewJobMyAngularSuffix, 'id'>;
 
 type JobMyAngularSuffixFormGroupContent = {
   id: FormControl<IJobMyAngularSuffix['id'] | NewJobMyAngularSuffix['id']>;
-  title: FormControl<IJobMyAngularSuffix['title']>;
+  name: FormControl<IJobMyAngularSuffix['name']>;
   type: FormControl<IJobMyAngularSuffix['type']>;
   minSalary: FormControl<IJobMyAngularSuffix['minSalary']>;
   maxSalary: FormControl<IJobMyAngularSuffix['maxSalary']>;
@@ -41,7 +41,7 @@ export class JobMyAngularSuffixFormService {
           validators: [Validators.required],
         }
       ),
-      title: new FormControl(jobRawValue.title),
+      name: new FormControl(jobRawValue.name),
       type: new FormControl(jobRawValue.type),
       minSalary: new FormControl(jobRawValue.minSalary),
       maxSalary: new FormControl(jobRawValue.maxSalary),

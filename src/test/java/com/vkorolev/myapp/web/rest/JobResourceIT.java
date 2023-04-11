@@ -32,8 +32,8 @@ import org.springframework.transaction.annotation.Transactional;
 @WithMockUser
 class JobResourceIT {
 
-    private static final String DEFAULT_TITLE = "AAAAAAAAAA";
-    private static final String UPDATED_TITLE = "BBBBBBBBBB";
+    private static final String DEFAULT_NAME = "AAAAAAAAAA";
+    private static final String UPDATED_NAME = "BBBBBBBBBB";
 
     private static final JobType DEFAULT_TYPE = JobType.PRODUCTION;
     private static final JobType UPDATED_TYPE = JobType.SUPPORTIVE;
@@ -71,7 +71,7 @@ class JobResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Job createEntity(EntityManager em) {
-        Job job = new Job().title(DEFAULT_TITLE).type(DEFAULT_TYPE).minSalary(DEFAULT_MIN_SALARY).maxSalary(DEFAULT_MAX_SALARY);
+        Job job = new Job().name(DEFAULT_NAME).type(DEFAULT_TYPE).minSalary(DEFAULT_MIN_SALARY).maxSalary(DEFAULT_MAX_SALARY);
         return job;
     }
 
@@ -82,7 +82,7 @@ class JobResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Job createUpdatedEntity(EntityManager em) {
-        Job job = new Job().title(UPDATED_TITLE).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
+        Job job = new Job().name(UPDATED_NAME).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
         return job;
     }
 
@@ -105,7 +105,7 @@ class JobResourceIT {
         List<Job> jobList = jobRepository.findAll();
         assertThat(jobList).hasSize(databaseSizeBeforeCreate + 1);
         Job testJob = jobList.get(jobList.size() - 1);
-        assertThat(testJob.getTitle()).isEqualTo(DEFAULT_TITLE);
+        assertThat(testJob.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testJob.getType()).isEqualTo(DEFAULT_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(DEFAULT_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(DEFAULT_MAX_SALARY);
@@ -142,7 +142,7 @@ class JobResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(job.getId().intValue())))
-            .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE)))
+            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE.toString())))
             .andExpect(jsonPath("$.[*].minSalary").value(hasItem(DEFAULT_MIN_SALARY.intValue())))
             .andExpect(jsonPath("$.[*].maxSalary").value(hasItem(DEFAULT_MAX_SALARY.intValue())));
@@ -160,7 +160,7 @@ class JobResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(job.getId().intValue()))
-            .andExpect(jsonPath("$.title").value(DEFAULT_TITLE))
+            .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
             .andExpect(jsonPath("$.type").value(DEFAULT_TYPE.toString()))
             .andExpect(jsonPath("$.minSalary").value(DEFAULT_MIN_SALARY.intValue()))
             .andExpect(jsonPath("$.maxSalary").value(DEFAULT_MAX_SALARY.intValue()));
@@ -185,7 +185,7 @@ class JobResourceIT {
         Job updatedJob = jobRepository.findById(job.getId()).get();
         // Disconnect from session so that the updates on updatedJob are not directly saved in db
         em.detach(updatedJob);
-        updatedJob.title(UPDATED_TITLE).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
+        updatedJob.name(UPDATED_NAME).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
         JobDTO jobDTO = jobMapper.toDto(updatedJob);
 
         restJobMockMvc
@@ -200,7 +200,7 @@ class JobResourceIT {
         List<Job> jobList = jobRepository.findAll();
         assertThat(jobList).hasSize(databaseSizeBeforeUpdate);
         Job testJob = jobList.get(jobList.size() - 1);
-        assertThat(testJob.getTitle()).isEqualTo(UPDATED_TITLE);
+        assertThat(testJob.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testJob.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(UPDATED_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(UPDATED_MAX_SALARY);
@@ -297,7 +297,7 @@ class JobResourceIT {
         List<Job> jobList = jobRepository.findAll();
         assertThat(jobList).hasSize(databaseSizeBeforeUpdate);
         Job testJob = jobList.get(jobList.size() - 1);
-        assertThat(testJob.getTitle()).isEqualTo(DEFAULT_TITLE);
+        assertThat(testJob.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testJob.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(DEFAULT_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(DEFAULT_MAX_SALARY);
@@ -315,7 +315,7 @@ class JobResourceIT {
         Job partialUpdatedJob = new Job();
         partialUpdatedJob.setId(job.getId());
 
-        partialUpdatedJob.title(UPDATED_TITLE).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
+        partialUpdatedJob.name(UPDATED_NAME).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
 
         restJobMockMvc
             .perform(
@@ -329,7 +329,7 @@ class JobResourceIT {
         List<Job> jobList = jobRepository.findAll();
         assertThat(jobList).hasSize(databaseSizeBeforeUpdate);
         Job testJob = jobList.get(jobList.size() - 1);
-        assertThat(testJob.getTitle()).isEqualTo(UPDATED_TITLE);
+        assertThat(testJob.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testJob.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(UPDATED_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(UPDATED_MAX_SALARY);

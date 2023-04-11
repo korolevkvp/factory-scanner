@@ -19,9 +19,8 @@ type FactoryMyAngularSuffixFormDefaults = Pick<NewFactoryMyAngularSuffix, 'id'>;
 type FactoryMyAngularSuffixFormGroupContent = {
   id: FormControl<IFactoryMyAngularSuffix['id'] | NewFactoryMyAngularSuffix['id']>;
   name: FormControl<IFactoryMyAngularSuffix['name']>;
-  streetAddress: FormControl<IFactoryMyAngularSuffix['streetAddress']>;
+  address: FormControl<IFactoryMyAngularSuffix['address']>;
   postalCode: FormControl<IFactoryMyAngularSuffix['postalCode']>;
-  city: FormControl<IFactoryMyAngularSuffix['city']>;
 };
 
 export type FactoryMyAngularSuffixFormGroup = FormGroup<FactoryMyAngularSuffixFormGroupContent>;
@@ -42,9 +41,8 @@ export class FactoryMyAngularSuffixFormService {
         }
       ),
       name: new FormControl(factoryRawValue.name),
-      streetAddress: new FormControl(factoryRawValue.streetAddress),
+      address: new FormControl(factoryRawValue.address),
       postalCode: new FormControl(factoryRawValue.postalCode),
-      city: new FormControl(factoryRawValue.city),
     });
   }
 

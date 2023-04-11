@@ -45,7 +45,7 @@
         <dt><span jhiTranslate="factoryScannerApp.worker.job">Job</span></dt>
         <dd>
           <div *ngIf="worker.job">
-            <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.title }}</a>
+            <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.name }}</a>
           </div>
         </dd>
         <dt><span jhiTranslate="factoryScannerApp.worker.factory">Factory</span></dt>

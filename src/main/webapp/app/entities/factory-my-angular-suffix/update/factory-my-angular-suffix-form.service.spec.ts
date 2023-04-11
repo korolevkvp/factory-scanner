@@ -21,9 +21,8 @@ describe('FactoryMyAngularSuffix Form Service', () => {
           expect.objectContaining({
             id: expect.any(Object),
             name: expect.any(Object),
-            streetAddress: expect.any(Object),
+            address: expect.any(Object),
             postalCode: expect.any(Object),
-            city: expect.any(Object),
           })
         );
       });
@@ -35,9 +34,8 @@ describe('FactoryMyAngularSuffix Form Service', () => {
           expect.objectContaining({
             id: expect.any(Object),
             name: expect.any(Object),
-            streetAddress: expect.any(Object),
+            address: expect.any(Object),
             postalCode: expect.any(Object),
-            city: expect.any(Object),
           })
         );
       });

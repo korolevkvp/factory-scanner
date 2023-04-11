@@ -13,15 +13,15 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring")
 public interface WorkerMapper extends EntityMapper<WorkerDTO, Worker> {
-    @Mapping(target = "job", source = "job", qualifiedByName = "jobTitle")
+    @Mapping(target = "job", source = "job", qualifiedByName = "jobName")
     @Mapping(target = "factory", source = "factory", qualifiedByName = "factoryName")
     WorkerDTO toDto(Worker s);
 
-    @Named("jobTitle")
+    @Named("jobName")
     @BeanMapping(ignoreByDefault = true)
     @Mapping(target = "id", source = "id")
-    @Mapping(target = "title", source = "title")
-    JobDTO toDtoJobTitle(Job job);
+    @Mapping(target = "name", source = "name")
+    JobDTO toDtoJobName(Job job);
 
     @Named("factoryName")
     @BeanMapping(ignoreByDefault = true)

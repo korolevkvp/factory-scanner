@@ -44,21 +44,15 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="streetAddress">
+          <th scope="col" jhiSortBy="address">
             <div class="d-flex">
-              <span jhiTranslate="factoryScannerApp.factory.streetAddress">Street Address</span>
+              <span jhiTranslate="factoryScannerApp.factory.address">Address</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
           <th scope="col" jhiSortBy="postalCode">
             <div class="d-flex">
               <span jhiTranslate="factoryScannerApp.factory.postalCode">Postal Code</span>
-              <fa-icon class="p-1" icon="sort"></fa-icon>
-            </div>
-          </th>
-          <th scope="col" jhiSortBy="city">
-            <div class="d-flex">
-              <span jhiTranslate="factoryScannerApp.factory.city">City</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -76,9 +70,8 @@
             <a [routerLink]="['/factory-my-angular-suffix', factory.id, 'view']">{{ factory.id }}</a>
           </td>
           <td>{{ factory.name }}</td>
-          <td>{{ factory.streetAddress }}</td>
+          <td>{{ factory.address }}</td>
           <td>{{ factory.postalCode }}</td>
-          <td>{{ factory.city }}</td>
           <td class="text-end">
             <div class="btn-group">
               <button

@@ -2,16 +2,18 @@
   "factoryScannerApp": {
     "MachineType": {
       "null": "",
-      "LATHE": "LATHE",
-      "MILLING": "MILLING",
-      "GRINDING": "GRINDING",
+      "LATHETURNING": "LATHETURNING",
+      "LATHEREVOLVING": "LATHEREVOLVING",
+      "LATHECAROUSEL": "LATHECAROUSEL",
+      "BORING": "BORING",
+      "COORDINATEBORING": "COORDINATEBORING",
       "DRILLING": "DRILLING",
-      "SHAPER": "SHAPER",
-      "BROACHING": "BROACHING",
-      "SAW": "SAW",
-      "PLANER": "PLANER",
-      "SHEARING": "SHEARING",
-      "HOBBING": "HOBBING"
+      "PLANINGMORTISING": "PLANINGMORTISING",
+      "DRAWING": "DRAWING",
+      "GRINDING": "GRINDING",
+      "TOOTHCUTTING": "TOOTHCUTTING",
+      "SPECIAL": "SPECIAL",
+      "CUTOFF": "CUTOFF"
     }
   }
 }

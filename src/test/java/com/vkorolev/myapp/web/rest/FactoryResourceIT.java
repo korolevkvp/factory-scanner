@@ -34,14 +34,11 @@ class FactoryResourceIT {
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
     private static final String UPDATED_NAME = "BBBBBBBBBB";
 
-    private static final String DEFAULT_STREET_ADDRESS = "AAAAAAAAAA";
-    private static final String UPDATED_STREET_ADDRESS = "BBBBBBBBBB";
+    private static final String DEFAULT_ADDRESS = "AAAAAAAAAA";
+    private static final String UPDATED_ADDRESS = "BBBBBBBBBB";
 
     private static final String DEFAULT_POSTAL_CODE = "AAAAAAAAAA";
     private static final String UPDATED_POSTAL_CODE = "BBBBBBBBBB";
-
-    private static final String DEFAULT_CITY = "AAAAAAAAAA";
-    private static final String UPDATED_CITY = "BBBBBBBBBB";
 
     private static final String ENTITY_API_URL = "/api/factories";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -70,11 +67,7 @@ class FactoryResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Factory createEntity(EntityManager em) {
-        Factory factory = new Factory()
-            .name(DEFAULT_NAME)
-            .streetAddress(DEFAULT_STREET_ADDRESS)
-            .postalCode(DEFAULT_POSTAL_CODE)
-            .city(DEFAULT_CITY);
+        Factory factory = new Factory().name(DEFAULT_NAME).address(DEFAULT_ADDRESS).postalCode(DEFAULT_POSTAL_CODE);
         return factory;
     }
 
@@ -85,11 +78,7 @@ class FactoryResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Factory createUpdatedEntity(EntityManager em) {
-        Factory factory = new Factory()
-            .name(UPDATED_NAME)
-            .streetAddress(UPDATED_STREET_ADDRESS)
-            .postalCode(UPDATED_POSTAL_CODE)
-            .city(UPDATED_CITY);
+        Factory factory = new Factory().name(UPDATED_NAME).address(UPDATED_ADDRESS).postalCode(UPDATED_POSTAL_CODE);
         return factory;
     }
 
@@ -113,9 +102,8 @@ class FactoryResourceIT {
         assertThat(factoryList).hasSize(databaseSizeBeforeCreate + 1);
         Factory testFactory = factoryList.get(factoryList.size() - 1);
         assertThat(testFactory.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testFactory.getStreetAddress()).isEqualTo(DEFAULT_STREET_ADDRESS);
+        assertThat(testFactory.getAddress()).isEqualTo(DEFAULT_ADDRESS);
         assertThat(testFactory.getPostalCode()).isEqualTo(DEFAULT_POSTAL_CODE);
-        assertThat(testFactory.getCity()).isEqualTo(DEFAULT_CITY);
     }
 
     @Test
@@ -150,9 +138,8 @@ class FactoryResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(factory.getId().intValue())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
-            .andExpect(jsonPath("$.[*].streetAddress").value(hasItem(DEFAULT_STREET_ADDRESS)))
-            .andExpect(jsonPath("$.[*].postalCode").value(hasItem(DEFAULT_POSTAL_CODE)))
-            .andExpect(jsonPath("$.[*].city").value(hasItem(DEFAULT_CITY)));
+            .andExpect(jsonPath("$.[*].address").value(hasItem(DEFAULT_ADDRESS)))
+            .andExpect(jsonPath("$.[*].postalCode").value(hasItem(DEFAULT_POSTAL_CODE)));
     }
 
     @Test
@@ -168,9 +155,8 @@ class FactoryResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(factory.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
-            .andExpect(jsonPath("$.streetAddress").value(DEFAULT_STREET_ADDRESS))
-            .andExpect(jsonPath("$.postalCode").value(DEFAULT_POSTAL_CODE))
-            .andExpect(jsonPath("$.city").value(DEFAULT_CITY));
+            .andExpect(jsonPath("$.address").value(DEFAULT_ADDRESS))
+            .andExpect(jsonPath("$.postalCode").value(DEFAULT_POSTAL_CODE));
     }
 
     @Test
@@ -192,7 +178,7 @@ class FactoryResourceIT {
         Factory updatedFactory = factoryRepository.findById(factory.getId()).get();
         // Disconnect from session so that the updates on updatedFactory are not directly saved in db
         em.detach(updatedFactory);
-        updatedFactory.name(UPDATED_NAME).streetAddress(UPDATED_STREET_ADDRESS).postalCode(UPDATED_POSTAL_CODE).city(UPDATED_CITY);
+        updatedFactory.name(UPDATED_NAME).address(UPDATED_ADDRESS).postalCode(UPDATED_POSTAL_CODE);
         FactoryDTO factoryDTO = factoryMapper.toDto(updatedFactory);
 
         restFactoryMockMvc
@@ -208,9 +194,8 @@ class FactoryResourceIT {
         assertThat(factoryList).hasSize(databaseSizeBeforeUpdate);
         Factory testFactory = factoryList.get(factoryList.size() - 1);
         assertThat(testFactory.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testFactory.getStreetAddress()).isEqualTo(UPDATED_STREET_ADDRESS);
+        assertThat(testFactory.getAddress()).isEqualTo(UPDATED_ADDRESS);
         assertThat(testFactory.getPostalCode()).isEqualTo(UPDATED_POSTAL_CODE);
-        assertThat(testFactory.getCity()).isEqualTo(UPDATED_CITY);
     }
 
     @Test
@@ -290,7 +275,7 @@ class FactoryResourceIT {
         Factory partialUpdatedFactory = new Factory();
         partialUpdatedFactory.setId(factory.getId());
 
-        partialUpdatedFactory.streetAddress(UPDATED_STREET_ADDRESS).postalCode(UPDATED_POSTAL_CODE).city(UPDATED_CITY);
+        partialUpdatedFactory.address(UPDATED_ADDRESS).postalCode(UPDATED_POSTAL_CODE);
 
         restFactoryMockMvc
             .perform(
@@ -305,9 +290,8 @@ class FactoryResourceIT {
         assertThat(factoryList).hasSize(databaseSizeBeforeUpdate);
         Factory testFactory = factoryList.get(factoryList.size() - 1);
         assertThat(testFactory.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testFactory.getStreetAddress()).isEqualTo(UPDATED_STREET_ADDRESS);
+        assertThat(testFactory.getAddress()).isEqualTo(UPDATED_ADDRESS);
         assertThat(testFactory.getPostalCode()).isEqualTo(UPDATED_POSTAL_CODE);
-        assertThat(testFactory.getCity()).isEqualTo(UPDATED_CITY);
     }
 
     @Test
@@ -322,7 +306,7 @@ class FactoryResourceIT {
         Factory partialUpdatedFactory = new Factory();
         partialUpdatedFactory.setId(factory.getId());
 
-        partialUpdatedFactory.name(UPDATED_NAME).streetAddress(UPDATED_STREET_ADDRESS).postalCode(UPDATED_POSTAL_CODE).city(UPDATED_CITY);
+        partialUpdatedFactory.name(UPDATED_NAME).address(UPDATED_ADDRESS).postalCode(UPDATED_POSTAL_CODE);
 
         restFactoryMockMvc
             .perform(
@@ -337,9 +321,8 @@ class FactoryResourceIT {
         assertThat(factoryList).hasSize(databaseSizeBeforeUpdate);
         Factory testFactory = factoryList.get(factoryList.size() - 1);
         assertThat(testFactory.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testFactory.getStreetAddress()).isEqualTo(UPDATED_STREET_ADDRESS);
+        assertThat(testFactory.getAddress()).isEqualTo(UPDATED_ADDRESS);
         assertThat(testFactory.getPostalCode()).isEqualTo(UPDATED_POSTAL_CODE);
-        assertThat(testFactory.getCity()).isEqualTo(UPDATED_CITY);
     }
 
     @Test

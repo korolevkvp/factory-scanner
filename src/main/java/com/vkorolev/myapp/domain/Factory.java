@@ -22,14 +22,11 @@ public class Factory implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "street_address")
-    private String streetAddress;
+    @Column(name = "address")
+    private String address;
 
     @Column(name = "postal_code")
     private String postalCode;
-
-    @Column(name = "city")
-    private String city;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -59,17 +56,17 @@ public class Factory implements Serializable {
         this.name = name;
     }
 
-    public String getStreetAddress() {
-        return this.streetAddress;
+    public String getAddress() {
+        return this.address;
     }
 
-    public Factory streetAddress(String streetAddress) {
-        this.setStreetAddress(streetAddress);
+    public Factory address(String address) {
+        this.setAddress(address);
         return this;
     }
 
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPostalCode() {
@@ -83,19 +80,6 @@ public class Factory implements Serializable {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
-    }
-
-    public String getCity() {
-        return this.city;
-    }
-
-    public Factory city(String city) {
-        this.setCity(city);
-        return this;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -123,9 +107,8 @@ public class Factory implements Serializable {
         return "Factory{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
-            ", streetAddress='" + getStreetAddress() + "'" +
+            ", address='" + getAddress() + "'" +
             ", postalCode='" + getPostalCode() + "'" +
-            ", city='" + getCity() + "'" +
             "}";
     }
 }

@@ -12,7 +12,7 @@ public class JobDTO implements Serializable {
 
     private Long id;
 
-    private String title;
+    private String name;
 
     private JobType type;
 
@@ -28,12 +28,12 @@ public class JobDTO implements Serializable {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public JobType getType() {
@@ -86,7 +86,7 @@ public class JobDTO implements Serializable {
     public String toString() {
         return "JobDTO{" +
             "id=" + getId() +
-            ", title='" + getTitle() + "'" +
+            ", name='" + getName() + "'" +
             ", type='" + getType() + "'" +
             ", minSalary=" + getMinSalary() +
             ", maxSalary=" + getMaxSalary() +

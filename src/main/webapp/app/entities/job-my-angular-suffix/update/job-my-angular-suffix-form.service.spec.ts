@@ -20,7 +20,7 @@ describe('JobMyAngularSuffix Form Service', () => {
         expect(formGroup.controls).toEqual(
           expect.objectContaining({
             id: expect.any(Object),
-            title: expect.any(Object),
+            name: expect.any(Object),
             type: expect.any(Object),
             minSalary: expect.any(Object),
             maxSalary: expect.any(Object),
@@ -34,7 +34,7 @@ describe('JobMyAngularSuffix Form Service', () => {
         expect(formGroup.controls).toEqual(
           expect.objectContaining({
             id: expect.any(Object),
-            title: expect.any(Object),
+            name: expect.any(Object),
             type: expect.any(Object),
             minSalary: expect.any(Object),
             maxSalary: expect.any(Object),

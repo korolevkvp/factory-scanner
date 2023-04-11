@@ -1,4 +1,4 @@
-id;title;type;min_salary;max_salary
+id;name;type;min_salary;max_salary
 1;(не оптимизационный;ACCOUNTING;69364;96146
 2;архивирование maximize;PRODUCTION;63765;82
 3;Бакалея payment;PRODUCTION;15212;26854
