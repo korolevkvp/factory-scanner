@@ -4,16 +4,18 @@ package com.vkorolev.myapp.domain.enumeration;
  * The MachineType enumeration.
  */
 public enum MachineType {
-    LATHETURNING,
-    LATHEREVOLVING,
-    LATHECAROUSEL,
+    LATHE_TURNING,
+    LATHE_REVOLVING,
+    AUTOMATIC,
+    LATHE_CAROUSEL,
     BORING,
-    COORDINATEBORING,
+    COORDINATE_BORING,
     DRILLING,
-    PLANINGMORTISING,
+    MILLING,
+    PLANING_MORTISING,
     DRAWING,
     GRINDING,
-    TOOTHCUTTING,
+    TOOTH_CUTTING,
     SPECIAL,
-    CUTOFF,
+    CUT_OFF,
 }
