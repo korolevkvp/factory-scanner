@@ -2,7 +2,7 @@
   "factoryScannerApp": {
     "factory": {
       "home": {
-        "title": "Предприятия",
+        "title": "Заводы",
         "refreshListLabel": "Обновить список",
         "createLabel": "Добавить новый Завод",
         "createOrEditLabel": "Добавить или отредактировать Завод",
