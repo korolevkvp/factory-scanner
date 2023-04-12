@@ -1,10 +1,11 @@
 
-  ${AnsiColor.GREEN}      ██╗${AnsiColor.RED} ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
-  ${AnsiColor.GREEN}██╗   ██║${AnsiColor.RED} ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
-  ${AnsiColor.GREEN}╚██████╔╝${AnsiColor.RED} ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
-  ${AnsiColor.GREEN} ╚═════╝ ${AnsiColor.RED} ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+  ${AnsiColor.GREEN} ___      ___ ${AnsiColor.RED}___  __    ________  ________  ________  ___       _______   ___      ___
+  ${AnsiColor.GREEN}|\  \    /  /|${AnsiColor.RED}\  \|\  \ |\   __  \|\   __  \|\   __  \|\  \     |\  ___ \ |\  \    /  /|
+  ${AnsiColor.GREEN}\ \  \  /  / |${AnsiColor.RED} \  \/  /|\ \  \|\  \ \  \|\  \ \  \|\  \ \  \    \ \   __/|\ \  \  /  / /
+  ${AnsiColor.GREEN} \ \  \/  / / ${AnsiColor.RED}\ \   ___  \ \  \\\  \ \   _  _\ \  \\\  \ \  \    \ \  \_|/_\ \  \/  / /
+  ${AnsiColor.GREEN}  \ \    / /  ${AnsiColor.RED} \ \  \\ \  \ \  \\\  \ \  \\  \\ \  \\\  \ \  \____\ \  \_|\ \ \    / /
+  ${AnsiColor.GREEN}   \ \__/ /   ${AnsiColor.RED}  \ \__\\ \__\ \_______\ \__\\ _\\ \_______\ \_______\ \_______\ \__/ /
+  ${AnsiColor.GREEN}    \|__|/    ${AnsiColor.RED}   \|__| \|__|\|_______|\|__|\|__|\|_______|\|_______|\|_______|\|__|/
 
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}
+${AnsiColor.BRIGHT_BLUE}:: Running Spring Boot ${spring-boot.version} ::
+:: https://github.com/korolevkvp/factory-scanner ::${AnsiColor.DEFAULT}
