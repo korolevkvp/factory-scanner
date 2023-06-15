@@ -2,11 +2,11 @@
   "factoryScannerApp": {
     "JobType": {
       "null": "",
-      "PRODUCTION": "ПРОИЗВОДСТВЕННЫЙ",
-      "SUPPORTIVE": "ВСПОМОГАТЕЛЬНЫЙ",
-      "ATTENDANT": "МОП",
-      "TECH_ENG": "ИТР",
-      "ACCOUNTING": "СКП"
+      "PRODUCTION": "PRODUCTION",
+      "SUPPORTIVE": "SUPPORTIVE",
+      "ATTENDANT": "ATTENDANT",
+      "TECH_ENG": "TECH_ENG",
+      "ACCOUNTING": "ACCOUNTING"
     }
   }
 }

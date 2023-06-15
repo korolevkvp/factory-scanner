@@ -6,6 +6,7 @@ export interface IJobMyAngularSuffix {
   type?: JobType | null;
   minSalary?: number | null;
   maxSalary?: number | null;
+  gradeCount?: number | null;
 }
 
 export type NewJobMyAngularSuffix = Omit<IJobMyAngularSuffix, 'id'> & { id: null };

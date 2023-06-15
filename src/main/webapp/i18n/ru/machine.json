@@ -2,25 +2,25 @@
   "factoryScannerApp": {
     "machine": {
       "home": {
-        "title": "Станки",
+        "title": "Machines",
         "refreshListLabel": "Обновить список",
-        "createLabel": "Добавить новый Станок",
-        "createOrEditLabel": "Добавить или отредактировать Станок",
-        "notFound": "Станок не найден"
+        "createLabel": "Создать новый Machine",
+        "createOrEditLabel": "Создать или отредактировать Machine",
+        "notFound": "Machines не найдено"
       },
-      "created": "Новый Станок создан с идентификатором {{ param }}",
-      "updated": "Станок обновлен с идентификатором {{ param }}",
-      "deleted": "Станок удален с идентификатором {{ param }}",
+      "created": "Новый Machine создан с идентификатором {{ param }}",
+      "updated": "Machine обновлен с идентификатором {{ param }}",
+      "deleted": "Machine удален с идентификатором {{ param }}",
       "delete": {
-        "question": "Вы уверены что хотите удалить Станок {{ id }}?"
+        "question": "Вы уверены что хотите удалить Machine {{ id }}?"
       },
       "detail": {
-        "title": "Станок"
+        "title": "Machine"
       },
       "id": "ID",
-      "model": "Модель",
-      "type": "Тип",
-      "factory": "Завод"
+      "model": "Model",
+      "type": "Type",
+      "factory": "Factory"
     }
   }
 }

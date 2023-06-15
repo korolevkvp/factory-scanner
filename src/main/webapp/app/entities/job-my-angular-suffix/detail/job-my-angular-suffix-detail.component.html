@@ -30,6 +30,10 @@
         <dd>
           <span>{{ job.maxSalary }}</span>
         </dd>
+        <dt><span jhiTranslate="factoryScannerApp.job.gradeCount">Grade Count</span></dt>
+        <dd>
+          <span>{{ job.gradeCount }}</span>
+        </dd>
       </dl>
 
       <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">

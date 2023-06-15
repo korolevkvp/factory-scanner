@@ -111,7 +111,7 @@
           <td>{{ worker.salary }}</td>
           <td>{{ worker.phoneNumber }}</td>
           <td>{{ worker.hireDate | formatMediumDate }}</td>
-          <td jhiTranslate="{{ 'factoryScannerApp.Grade.' + worker.grade }}">{{ worker.grade }}</td>
+          <td>{{ worker.grade }}</td>
           <td>
             <div *ngIf="worker.job">
               <a [routerLink]="['/job-my-angular-suffix', worker.job.id, 'view']">{{ worker.job.name }}</a>

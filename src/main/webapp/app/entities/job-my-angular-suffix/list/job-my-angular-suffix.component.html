@@ -62,6 +62,12 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
+          <th scope="col" jhiSortBy="gradeCount">
+            <div class="d-flex">
+              <span jhiTranslate="factoryScannerApp.job.gradeCount">Grade Count</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
           <th scope="col"></th>
         </tr>
       </thead>
@@ -74,6 +80,7 @@
           <td jhiTranslate="{{ 'factoryScannerApp.JobType.' + job.type }}">{{ job.type }}</td>
           <td>{{ job.minSalary }}</td>
           <td>{{ job.maxSalary }}</td>
+          <td>{{ job.gradeCount }}</td>
           <td class="text-end">
             <div class="btn-group">
               <button

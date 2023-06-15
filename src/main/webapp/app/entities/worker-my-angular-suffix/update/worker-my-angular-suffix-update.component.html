@@ -75,10 +75,7 @@
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="factoryScannerApp.worker.grade" for="field_grade">Grade</label>
-          <select class="form-control" name="grade" formControlName="grade" id="field_grade" data-cy="grade">
-            <option [ngValue]="null">{{ 'factoryScannerApp.Grade.null' | translate }}</option>
-            <option *ngFor="let grade of gradeValues" [value]="grade">{{ 'factoryScannerApp.Grade.' + grade | translate }}</option>
-          </select>
+          <input type="number" class="form-control" name="grade" id="field_grade" data-cy="grade" formControlName="grade" />
         </div>
 
         <div class="row mb-3">

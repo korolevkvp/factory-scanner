@@ -21,7 +21,8 @@
       "name": "Name",
       "type": "Type",
       "minSalary": "Min Salary",
-      "maxSalary": "Max Salary"
+      "maxSalary": "Max Salary",
+      "gradeCount": "Grade Count"
     }
   }
 }

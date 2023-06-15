@@ -20,6 +20,8 @@ public class JobDTO implements Serializable {
 
     private Long maxSalary;
 
+    private Long gradeCount;
+
     public Long getId() {
         return id;
     }
@@ -60,6 +62,14 @@ public class JobDTO implements Serializable {
         this.maxSalary = maxSalary;
     }
 
+    public Long getGradeCount() {
+        return gradeCount;
+    }
+
+    public void setGradeCount(Long gradeCount) {
+        this.gradeCount = gradeCount;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -90,6 +100,7 @@ public class JobDTO implements Serializable {
             ", type='" + getType() + "'" +
             ", minSalary=" + getMinSalary() +
             ", maxSalary=" + getMaxSalary() +
+            ", gradeCount=" + getGradeCount() +
             "}";
     }
 }

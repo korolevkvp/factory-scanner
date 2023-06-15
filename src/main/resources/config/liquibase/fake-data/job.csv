@@ -1,11 +1,11 @@
-id;name;type;min_salary;max_salary
-1;(не оптимизационный;ACCOUNTING;69364;96146
-2;архивирование maximize;PRODUCTION;63765;82
-3;Бакалея payment;PRODUCTION;15212;26854
-4;Деревянный сжатие детское;ATTENDANT;21485;35317
-5;applications;ACCOUNTING;5446;42838
-6;интерфейс орхидный;ATTENDANT;53984;24658
-7;Великолепный;ATTENDANT;67462;77855
-8;кортеж пр.;ACCOUNTING;35784;76532
-9;initiatives envisioneer НМЖД;ACCOUNTING;74207;51439
-10;страховой Balboa;PRODUCTION;7797;30991
+id;name;type;min_salary;max_salary;grade_count
+1;(не оптимизационный;ACCOUNTING;69364;96146;60283
+2;Пластиковый Auto deposit;PRODUCTION;36232;91153;63563
+3;улица optimizing основной;ATTENDANT;81983;36043;37364
+4;Borders;SUPPORTIVE;35317;19721;43568
+5;синтез action-items улица;TECH_ENG;88722;44752;53984
+6;Эргономичный;PRODUCTION;49758;67462;77855
+7;кортеж пр.;ACCOUNTING;35784;76532;69808
+8;Берет solution;TECH_ENG;50198;96288;74207
+9;invoice Фантастический;SUPPORTIVE;6603;7797;30991
+10;страховой логистический;SUPPORTIVE;88432;72891;6128

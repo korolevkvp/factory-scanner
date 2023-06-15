@@ -32,7 +32,7 @@
             <column name="hire_date" type="date">
                 <constraints nullable="true" />
             </column>
-            <column name="grade" type="varchar(255)">
+            <column name="grade" type="bigint">
                 <constraints nullable="true" />
             </column>
             <column name="job_id" type="bigint">
@@ -68,7 +68,7 @@
             <column name="salary" type="numeric"/>
             <column name="phone_number" type="string"/>
             <column name="hire_date" type="date"/>
-            <column name="grade" type="string"/>
+            <column name="grade" type="numeric"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

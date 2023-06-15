@@ -32,8 +32,7 @@
     },
     {
       "fieldName": "grade",
-      "fieldType": "Grade",
-      "fieldValues": "JUNIOR,MIDDLE,SENIOR,LEAD"
+      "fieldType": "Long"
     }
   ],
   "fluentMethods": true,

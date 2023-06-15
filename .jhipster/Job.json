@@ -22,6 +22,10 @@
     {
       "fieldName": "maxSalary",
       "fieldType": "Long"
+    },
+    {
+      "fieldName": "gradeCount",
+      "fieldType": "Long"
     }
   ],
   "fluentMethods": true,

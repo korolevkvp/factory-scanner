@@ -44,6 +44,9 @@ class JobResourceIT {
     private static final Long DEFAULT_MAX_SALARY = 1L;
     private static final Long UPDATED_MAX_SALARY = 2L;
 
+    private static final Long DEFAULT_GRADE_COUNT = 1L;
+    private static final Long UPDATED_GRADE_COUNT = 2L;
+
     private static final String ENTITY_API_URL = "/api/jobs";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -71,7 +74,12 @@ class JobResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Job createEntity(EntityManager em) {
-        Job job = new Job().name(DEFAULT_NAME).type(DEFAULT_TYPE).minSalary(DEFAULT_MIN_SALARY).maxSalary(DEFAULT_MAX_SALARY);
+        Job job = new Job()
+            .name(DEFAULT_NAME)
+            .type(DEFAULT_TYPE)
+            .minSalary(DEFAULT_MIN_SALARY)
+            .maxSalary(DEFAULT_MAX_SALARY)
+            .gradeCount(DEFAULT_GRADE_COUNT);
         return job;
     }
 
@@ -82,7 +90,12 @@ class JobResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Job createUpdatedEntity(EntityManager em) {
-        Job job = new Job().name(UPDATED_NAME).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
+        Job job = new Job()
+            .name(UPDATED_NAME)
+            .type(UPDATED_TYPE)
+            .minSalary(UPDATED_MIN_SALARY)
+            .maxSalary(UPDATED_MAX_SALARY)
+            .gradeCount(UPDATED_GRADE_COUNT);
         return job;
     }
 
@@ -109,6 +122,7 @@ class JobResourceIT {
         assertThat(testJob.getType()).isEqualTo(DEFAULT_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(DEFAULT_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(DEFAULT_MAX_SALARY);
+        assertThat(testJob.getGradeCount()).isEqualTo(DEFAULT_GRADE_COUNT);
     }
 
     @Test
@@ -145,7 +159,8 @@ class JobResourceIT {
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE.toString())))
             .andExpect(jsonPath("$.[*].minSalary").value(hasItem(DEFAULT_MIN_SALARY.intValue())))
-            .andExpect(jsonPath("$.[*].maxSalary").value(hasItem(DEFAULT_MAX_SALARY.intValue())));
+            .andExpect(jsonPath("$.[*].maxSalary").value(hasItem(DEFAULT_MAX_SALARY.intValue())))
+            .andExpect(jsonPath("$.[*].gradeCount").value(hasItem(DEFAULT_GRADE_COUNT.intValue())));
     }
 
     @Test
@@ -163,7 +178,8 @@ class JobResourceIT {
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
             .andExpect(jsonPath("$.type").value(DEFAULT_TYPE.toString()))
             .andExpect(jsonPath("$.minSalary").value(DEFAULT_MIN_SALARY.intValue()))
-            .andExpect(jsonPath("$.maxSalary").value(DEFAULT_MAX_SALARY.intValue()));
+            .andExpect(jsonPath("$.maxSalary").value(DEFAULT_MAX_SALARY.intValue()))
+            .andExpect(jsonPath("$.gradeCount").value(DEFAULT_GRADE_COUNT.intValue()));
     }
 
     @Test
@@ -185,7 +201,12 @@ class JobResourceIT {
         Job updatedJob = jobRepository.findById(job.getId()).get();
         // Disconnect from session so that the updates on updatedJob are not directly saved in db
         em.detach(updatedJob);
-        updatedJob.name(UPDATED_NAME).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
+        updatedJob
+            .name(UPDATED_NAME)
+            .type(UPDATED_TYPE)
+            .minSalary(UPDATED_MIN_SALARY)
+            .maxSalary(UPDATED_MAX_SALARY)
+            .gradeCount(UPDATED_GRADE_COUNT);
         JobDTO jobDTO = jobMapper.toDto(updatedJob);
 
         restJobMockMvc
@@ -204,6 +225,7 @@ class JobResourceIT {
         assertThat(testJob.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(UPDATED_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(UPDATED_MAX_SALARY);
+        assertThat(testJob.getGradeCount()).isEqualTo(UPDATED_GRADE_COUNT);
     }
 
     @Test
@@ -283,7 +305,7 @@ class JobResourceIT {
         Job partialUpdatedJob = new Job();
         partialUpdatedJob.setId(job.getId());
 
-        partialUpdatedJob.type(UPDATED_TYPE);
+        partialUpdatedJob.type(UPDATED_TYPE).gradeCount(UPDATED_GRADE_COUNT);
 
         restJobMockMvc
             .perform(
@@ -301,6 +323,7 @@ class JobResourceIT {
         assertThat(testJob.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(DEFAULT_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(DEFAULT_MAX_SALARY);
+        assertThat(testJob.getGradeCount()).isEqualTo(UPDATED_GRADE_COUNT);
     }
 
     @Test
@@ -315,7 +338,12 @@ class JobResourceIT {
         Job partialUpdatedJob = new Job();
         partialUpdatedJob.setId(job.getId());
 
-        partialUpdatedJob.name(UPDATED_NAME).type(UPDATED_TYPE).minSalary(UPDATED_MIN_SALARY).maxSalary(UPDATED_MAX_SALARY);
+        partialUpdatedJob
+            .name(UPDATED_NAME)
+            .type(UPDATED_TYPE)
+            .minSalary(UPDATED_MIN_SALARY)
+            .maxSalary(UPDATED_MAX_SALARY)
+            .gradeCount(UPDATED_GRADE_COUNT);
 
         restJobMockMvc
             .perform(
@@ -333,6 +361,7 @@ class JobResourceIT {
         assertThat(testJob.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testJob.getMinSalary()).isEqualTo(UPDATED_MIN_SALARY);
         assertThat(testJob.getMaxSalary()).isEqualTo(UPDATED_MAX_SALARY);
+        assertThat(testJob.getGradeCount()).isEqualTo(UPDATED_GRADE_COUNT);
     }
 
     @Test

@@ -8,7 +8,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.vkorolev.myapp.IntegrationTest;
 import com.vkorolev.myapp.domain.Worker;
-import com.vkorolev.myapp.domain.enumeration.Grade;
 import com.vkorolev.myapp.repository.WorkerRepository;
 import com.vkorolev.myapp.service.WorkerService;
 import com.vkorolev.myapp.service.dto.WorkerDTO;
@@ -62,8 +61,8 @@ class WorkerResourceIT {
     private static final LocalDate DEFAULT_HIRE_DATE = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_HIRE_DATE = LocalDate.now(ZoneId.systemDefault());
 
-    private static final Grade DEFAULT_GRADE = Grade.JUNIOR;
-    private static final Grade UPDATED_GRADE = Grade.MIDDLE;
+    private static final Long DEFAULT_GRADE = 1L;
+    private static final Long UPDATED_GRADE = 2L;
 
     private static final String ENTITY_API_URL = "/api/workers";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -192,7 +191,7 @@ class WorkerResourceIT {
             .andExpect(jsonPath("$.[*].salary").value(hasItem(DEFAULT_SALARY.intValue())))
             .andExpect(jsonPath("$.[*].phoneNumber").value(hasItem(DEFAULT_PHONE_NUMBER)))
             .andExpect(jsonPath("$.[*].hireDate").value(hasItem(DEFAULT_HIRE_DATE.toString())))
-            .andExpect(jsonPath("$.[*].grade").value(hasItem(DEFAULT_GRADE.toString())));
+            .andExpect(jsonPath("$.[*].grade").value(hasItem(DEFAULT_GRADE.intValue())));
     }
 
     @SuppressWarnings({ "unchecked" })
@@ -230,7 +229,7 @@ class WorkerResourceIT {
             .andExpect(jsonPath("$.salary").value(DEFAULT_SALARY.intValue()))
             .andExpect(jsonPath("$.phoneNumber").value(DEFAULT_PHONE_NUMBER))
             .andExpect(jsonPath("$.hireDate").value(DEFAULT_HIRE_DATE.toString()))
-            .andExpect(jsonPath("$.grade").value(DEFAULT_GRADE.toString()));
+            .andExpect(jsonPath("$.grade").value(DEFAULT_GRADE.intValue()));
     }
 
     @Test

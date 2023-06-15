@@ -11,6 +11,10 @@
         "machineMyAngularSuffix": "Станок",
         "factoryMyAngularSuffix": "Завод",
         "jobMyAngularSuffix": "Должность",
+        "workerMyAngularSuffix": "Worker",
+        "machineMyAngularSuffix": "Machine",
+        "factoryMyAngularSuffix": "Factory",
+        "jobMyAngularSuffix": "Job",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

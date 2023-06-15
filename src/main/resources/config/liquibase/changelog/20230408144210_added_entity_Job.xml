@@ -26,6 +26,9 @@
             <column name="max_salary" type="bigint">
                 <constraints nullable="true" />
             </column>
+            <column name="grade_count" type="bigint">
+                <constraints nullable="true" />
+            </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
     </changeSet>
@@ -51,6 +54,7 @@
             <column name="type" type="string"/>
             <column name="min_salary" type="numeric"/>
             <column name="max_salary" type="numeric"/>
+            <column name="grade_count" type="numeric"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

@@ -1,6 +1,5 @@
 package com.vkorolev.myapp.service.dto;
 
-import com.vkorolev.myapp.domain.enumeration.Grade;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public class WorkerDTO implements Serializable {
 
     private LocalDate hireDate;
 
-    private Grade grade;
+    private Long grade;
 
     private JobDTO job;
 
@@ -87,11 +86,11 @@ public class WorkerDTO implements Serializable {
         this.hireDate = hireDate;
     }
 
-    public Grade getGrade() {
+    public Long getGrade() {
         return grade;
     }
 
-    public void setGrade(Grade grade) {
+    public void setGrade(Long grade) {
         this.grade = grade;
     }
 
@@ -143,7 +142,7 @@ public class WorkerDTO implements Serializable {
             ", salary=" + getSalary() +
             ", phoneNumber='" + getPhoneNumber() + "'" +
             ", hireDate='" + getHireDate() + "'" +
-            ", grade='" + getGrade() + "'" +
+            ", grade=" + getGrade() +
             ", job=" + getJob() +
             ", factory=" + getFactory() +
             "}";

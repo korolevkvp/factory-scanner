@@ -7,17 +7,19 @@ export const sampleWithRequiredData: IJobMyAngularSuffix = {
 };
 
 export const sampleWithPartialData: IJobMyAngularSuffix = {
-  id: 59185,
-  name: 'Грубый Фильмы systemic',
-  maxSalary: 32907,
+  id: 95627,
+  name: 'Свитер',
+  maxSalary: 6918,
+  gradeCount: 4480,
 };
 
 export const sampleWithFullData: IJobMyAngularSuffix = {
-  id: 90392,
-  name: 'Ringgit functionalities Fundamental',
+  id: 26191,
+  name: 'Клатч Нижегородская streamline',
   type: JobType['SUPPORTIVE'],
-  minSalary: 17658,
-  maxSalary: 47285,
+  minSalary: 66360,
+  maxSalary: 28986,
+  gradeCount: 17658,
 };
 
 export const sampleWithNewData: NewJobMyAngularSuffix = {

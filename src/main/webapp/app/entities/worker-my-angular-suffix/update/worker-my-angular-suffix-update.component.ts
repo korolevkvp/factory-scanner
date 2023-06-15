@@ -11,7 +11,6 @@ import { IJobMyAngularSuffix } from 'app/entities/job-my-angular-suffix/job-my-a
 import { JobMyAngularSuffixService } from 'app/entities/job-my-angular-suffix/service/job-my-angular-suffix.service';
 import { IFactoryMyAngularSuffix } from 'app/entities/factory-my-angular-suffix/factory-my-angular-suffix.model';
 import { FactoryMyAngularSuffixService } from 'app/entities/factory-my-angular-suffix/service/factory-my-angular-suffix.service';
-import { Grade } from 'app/entities/enumerations/grade.model';
 
 @Component({
   selector: 'jhi-worker-my-angular-suffix-update',
@@ -20,7 +19,6 @@ import { Grade } from 'app/entities/enumerations/grade.model';
 export class WorkerMyAngularSuffixUpdateComponent implements OnInit {
   isSaving = false;
   worker: IWorkerMyAngularSuffix | null = null;
-  gradeValues = Object.keys(Grade);
 
   jobsSharedCollection: IJobMyAngularSuffix[] = [];
   factoriesSharedCollection: IFactoryMyAngularSuffix[] = [];

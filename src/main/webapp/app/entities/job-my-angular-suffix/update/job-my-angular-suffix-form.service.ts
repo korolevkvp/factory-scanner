@@ -22,6 +22,7 @@ type JobMyAngularSuffixFormGroupContent = {
   type: FormControl<IJobMyAngularSuffix['type']>;
   minSalary: FormControl<IJobMyAngularSuffix['minSalary']>;
   maxSalary: FormControl<IJobMyAngularSuffix['maxSalary']>;
+  gradeCount: FormControl<IJobMyAngularSuffix['gradeCount']>;
 };
 
 export type JobMyAngularSuffixFormGroup = FormGroup<JobMyAngularSuffixFormGroupContent>;
@@ -45,6 +46,7 @@ export class JobMyAngularSuffixFormService {
       type: new FormControl(jobRawValue.type),
       minSalary: new FormControl(jobRawValue.minSalary),
       maxSalary: new FormControl(jobRawValue.maxSalary),
+      gradeCount: new FormControl(jobRawValue.gradeCount),
     });
   }
 

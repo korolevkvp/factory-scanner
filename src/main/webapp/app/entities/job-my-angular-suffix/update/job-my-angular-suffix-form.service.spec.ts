@@ -24,6 +24,7 @@ describe('JobMyAngularSuffix Form Service', () => {
             type: expect.any(Object),
             minSalary: expect.any(Object),
             maxSalary: expect.any(Object),
+            gradeCount: expect.any(Object),
           })
         );
       });
@@ -38,6 +39,7 @@ describe('JobMyAngularSuffix Form Service', () => {
             type: expect.any(Object),
             minSalary: expect.any(Object),
             maxSalary: expect.any(Object),
+            gradeCount: expect.any(Object),
           })
         );
       });

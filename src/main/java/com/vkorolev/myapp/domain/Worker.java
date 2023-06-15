@@ -1,6 +1,5 @@
 package com.vkorolev.myapp.domain;
 
-import com.vkorolev.myapp.domain.enumeration.Grade;
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.*;
@@ -39,9 +38,8 @@ public class Worker implements Serializable {
     @Column(name = "hire_date")
     private LocalDate hireDate;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "grade")
-    private Grade grade;
+    private Long grade;
 
     @ManyToOne
     private Job job;
@@ -142,16 +140,16 @@ public class Worker implements Serializable {
         this.hireDate = hireDate;
     }
 
-    public Grade getGrade() {
+    public Long getGrade() {
         return this.grade;
     }
 
-    public Worker grade(Grade grade) {
+    public Worker grade(Long grade) {
         this.setGrade(grade);
         return this;
     }
 
-    public void setGrade(Grade grade) {
+    public void setGrade(Long grade) {
         this.grade = grade;
     }
 
@@ -211,7 +209,7 @@ public class Worker implements Serializable {
             ", salary=" + getSalary() +
             ", phoneNumber='" + getPhoneNumber() + "'" +
             ", hireDate='" + getHireDate() + "'" +
-            ", grade='" + getGrade() + "'" +
+            ", grade=" + getGrade() +
             "}";
     }
 }

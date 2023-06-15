@@ -33,6 +33,9 @@ public class Job implements Serializable {
     @Column(name = "max_salary")
     private Long maxSalary;
 
+    @Column(name = "grade_count")
+    private Long gradeCount;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -100,6 +103,19 @@ public class Job implements Serializable {
         this.maxSalary = maxSalary;
     }
 
+    public Long getGradeCount() {
+        return this.gradeCount;
+    }
+
+    public Job gradeCount(Long gradeCount) {
+        this.setGradeCount(gradeCount);
+        return this;
+    }
+
+    public void setGradeCount(Long gradeCount) {
+        this.gradeCount = gradeCount;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
@@ -128,6 +144,7 @@ public class Job implements Serializable {
             ", type='" + getType() + "'" +
             ", minSalary=" + getMinSalary() +
             ", maxSalary=" + getMaxSalary() +
+            ", gradeCount=" + getGradeCount() +
             "}";
     }
 }
