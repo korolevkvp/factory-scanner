@@ -7,11 +7,7 @@ entity Worker {
 	phoneNumber String,
 	hireDate LocalDate,
 	salary Long
-    grade Grade
-}
-
-enum Grade {
-    JUNIOR, MIDDLE, SENIOR, LEAD
+    grade Long
 }
 
 entity Machine {
@@ -46,7 +42,8 @@ entity Job {
 	name String,
     type JobType,
 	minSalary Long,
-	maxSalary Long
+	maxSalary Long,
+    gradeCount Long
 }
 
 enum JobType {
